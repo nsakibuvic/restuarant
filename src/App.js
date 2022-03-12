@@ -19,8 +19,8 @@ function App() {
   };
 
   const showRandomSelection = () => {
-    setRandomRes(!randomRes);
-    setShowAll(!showAll)
+    setRandomRes(prevState => !prevState);
+    setShowAll(prevState => !prevState);
   };
 
   const randomNumber = Math.floor(Math.random() * 12);
