@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 10%;
+  padding: 1% 10%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 10;
 }
@@ -17,11 +17,11 @@
   width: 100%;
   height: 50%;
   background-color: #2C3333;
-  color: white;
+  color: white;  
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 5% 5% 1%;
+  padding: 6% 5% 1%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 20;
 }
@@ -38,4 +38,13 @@
   cursor: pointer;
   margin-left: 1rem;
   margin: 0.25rem;
+}
+@media screen and (max-width: 600px) {
+  .subHeader {
+    padding-top: 100px;
+    display: grid;
+  }
+  .header {
+   margin-bottom: 20px;
+  }
 }
