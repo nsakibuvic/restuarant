@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react'; 
 import { Data } from '../components/Resturants/Data';
 import { cartReducer } from './Reducers';
+import { Provider } from 'react';
 
 const CartCtx = createContext(); 
 

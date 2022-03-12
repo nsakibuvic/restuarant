@@ -4,7 +4,7 @@ import HeaderCartButton from "./HeaderCartButton";
 import { CartState } from "../../store/Cart-Context";
 
 const Header = (props) => {
-  const { dispatch } = CartState();
+  const {state: { cart }, dispatch } = CartState();
 
   return (
     <Fragment>
@@ -19,7 +19,7 @@ const Header = (props) => {
         <span><button className={classes.clearButton} onClick={() => {
         dispatch({
           type: "REMOVE_FROM_CART",
-          payload: props.dataProp,
+          payload: cart[0],
         });
       }}>Clear</button></span>
       </div>
