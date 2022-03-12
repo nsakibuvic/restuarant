@@ -14,7 +14,7 @@ const Header = (props) => {
       </header>
       <div className={classes.subHeader}>        
         <span><label>Search</label> <input></input> </span>
-        <span>Randomly Selection</span>
+        <span onClick={props.randomSelection}>Randomly Selection</span>
         <span>Price Section</span>
         <span><button className={classes.clearButton} onClick={() => {
         dispatch({
