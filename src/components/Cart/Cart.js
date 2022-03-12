@@ -11,12 +11,14 @@ const Cart = (props) => {
   const [number, setNumber] = useState(0)
   
   const addNum = () =>{
-   setNumber(number+1)   
+   setNumber((prevState) => {
+     return prevState+1})   
   }
 
   const decrementNum = () =>{
     if (number<=0) return 
-    setNumber(number-1)   
+    setNumber((prevState)=>{
+      return prevState-1})   
    }
 
    console.log(cart)
