@@ -37,6 +37,7 @@ function App() {
             heading={item.restaurants[randomNumber].name}
             image={item.restaurants[randomNumber].imageSmallUrl}
             text={item.restaurants[randomNumber].description}
+            dataProp={item.restaurants[randomNumber]}
           />
         ))}
     </CartContext>
