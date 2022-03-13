@@ -15,6 +15,7 @@
 }
 .subHeader {
   width: 100%;
+  cursor: pointer;
   height: 50%;
   background-color: #2C3333;
   color: white;  
