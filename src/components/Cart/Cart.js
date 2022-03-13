@@ -3,26 +3,11 @@ import Modal from "./Modal";
 import Card from "../Resturants/Card";
 import { CartState } from "../../store/Cart-Context";
 import CartItem from "./CartItem";
-import { useState } from "react";
 
 const Cart = (props) => {
   const { state: { cart }, dispatch } = CartState();
-  
-  const [number, setNumber] = useState(0)
-  
-  const addNum = () =>{
-   setNumber((prevState) => {
-     return prevState+1})   
-  }
 
-  const decrementNum = () =>{
-    if (number<=0) return 
-    setNumber((prevState)=>{
-      return prevState-1})   
-   }
 
-   console.log(cart)
-  
   const cartItem = cart.map((res) => (
     <Card
       key={res.id}
@@ -41,14 +26,14 @@ const Cart = (props) => {
         <span>
           {cart.map((item) =>
             item.menu.map((el) => (
-              <CartItem key={el.id} price={`$${el.price}`} menuItem={el.name} amount={number} onAdd={addNum} onRemove={decrementNum}/>
+              <CartItem key={el.id} price={`$${el.price}`} menuItem={el.name} />
             ))
           )}
         </span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} disabled={cartIsEmpty} onClick={props.onCloseApp} onClick={() => {
-           dispatch({
+          dispatch({
             type: "REMOVE_FROM_CART",
             payload: cart[0],
           });
