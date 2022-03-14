@@ -10,6 +10,7 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false);
   const [randomRes, setRandomRes] = useState(false); 
   const [showAll, setShowAll] = useState(true)
+  const [storeInput, setStoreInput] = useState('')
   const cartHandler = () => {
     setCartOpen(true);
   };
@@ -24,12 +25,21 @@ function App() {
   };
 
   const randomNumber = Math.floor(Math.random() * 12);
+  
+  const submitInputHandler = (inputData) => {
+    setStoreInput(inputData)
+  }
+  
+  console.log([Data].map((item) =>item.restaurants.filter((res) =>res.name === storeInput)).reduce((prev, curr) => [...prev, ...curr]))
+
+  const outputtingResData =[Data].map((item) => {
+   return item.restaurants.filter((res) => res.name === storeInput)}).reduce((prev, curr) => [...prev, ...curr])
 
   return (
     <CartContext>
       {cartOpen && <Cart onCloseApp={hideCartHandler} />}
-      <Header onShowCart={cartHandler} randomSelection={showRandomSelection}/>
-      {showAll && <Resturants />}
+      <Header onShowCart={cartHandler} randomSelection={showRandomSelection} onAddInput={submitInputHandler}/>
+      {showAll && <Resturants restaurants={outputtingResData}/>}
       {randomRes &&
         [Data].map((item) => (
           <Card

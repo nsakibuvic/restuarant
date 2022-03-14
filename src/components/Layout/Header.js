@@ -6,6 +6,10 @@ import { CartState } from "../../store/Cart-Context";
 const Header = (props) => {
   const {state: { cart }, dispatch } = CartState();
 
+  const submitInputH = (event) =>{
+   props.onAddInput(event.target.value)
+  }
+
   return (
     <Fragment>
       <header className={classes.header}>
@@ -13,7 +17,7 @@ const Header = (props) => {
         <HeaderCartButton onClickHB={props.onShowCart} />
       </header>
       <div className={classes.subHeader}>        
-        <span><label>Search</label> <input></input> </span>
+        <span><label>Search</label> <input onChange={submitInputH}></input> </span>
         <span onClick={props.randomSelection}>Randomly Selection</span>
         <span>Price Section</span>
         <span><button className={classes.clearButton} onClick={() => {

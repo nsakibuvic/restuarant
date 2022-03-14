@@ -40,11 +40,13 @@ const Resturants = (props) => {
   // console.log(resturantData.map((item) =>
   // item.restaurants.filter(res => featuredID.find(item => item === res.id))));
 
+  const searchRes = props.restaurants.length > 0
+
   return (
      <Fragment>
         <div className={classes.featureCards}>
-          <h2>Featured Resturant</h2>
-          {resturantData.map((item) =>
+          {!searchRes && <h2>Featured Resturant</h2>}
+          {!searchRes && resturantData.map((item) =>
             item.restaurants
               .filter((res) =>
                 featuredRestaurants.find((item) => item === res.id)
@@ -62,7 +64,18 @@ const Resturants = (props) => {
         </div> 
         <div className={classes.resCards}>
           <h2>All Resturants</h2>
-          {resturantData.map((item) =>
+          {searchRes && props.restaurants.map(res =>
+            (
+              <Card
+                key={res.id}
+                heading={res.name}
+                image={res.imageSmallUrl}
+                text={res.description}
+                dataProp={res}
+              />
+            
+          ))}
+           {!searchRes && resturantData.map((item) =>
             item.restaurants.map((res) => (
               <Card
                 key={res.id}
