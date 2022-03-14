@@ -63,7 +63,7 @@ const Resturants = (props) => {
           )}
         </div> 
         <div className={classes.resCards}>
-          <h2>All Resturants</h2>
+          {searchRes? <h2>Results</h2>:<h2>All Resturants</h2>}
           {searchRes && props.restaurants.map(res =>
             (
               <Card
