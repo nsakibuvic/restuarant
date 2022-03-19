@@ -1,15 +1,10 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import Card from "./Card";
 import classes from "./Resturants.module.css";
 import { Data } from "./Data";
-import { CartState } from "../../store/Cart-Context";
 
 const Resturants = (props) => {
-  const {
-    state: { restaurants },
-  } = CartState();
-  // console.log(restaurants)
-
+ 
   const resturantData = [Data];
   // const featuredID = resturantData.map((item) =>
   //   item.featuredRestaurants.map((el) => el.restaurantId)

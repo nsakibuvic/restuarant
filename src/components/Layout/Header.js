@@ -19,7 +19,7 @@ const Header = (props) => {
       <div className={classes.subHeader}>        
         <span><label>Search</label> <input onChange={submitInputH}></input> </span>
         <span onClick={props.randomSelection}>Randomly Selection</span>
-        <span>Price Section</span>
+        <span onClick={props.priceSelection}>Price Section</span>
         <span><button className={classes.clearButton} onClick={() => {
         dispatch({
           type: "REMOVE_FROM_CART",

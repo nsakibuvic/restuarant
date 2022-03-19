@@ -32,7 +32,7 @@ const Cart = (props) => {
         </span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]} disabled={cartIsEmpty} onClick={props.onCloseApp} onClick={() => {
+        <button className={classes["button--alt"]} disabled={cartIsEmpty} onClick={() => {
           dispatch({
             type: "REMOVE_FROM_CART",
             payload: cart[0],
