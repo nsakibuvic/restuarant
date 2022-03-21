@@ -23,6 +23,7 @@ function App() {
 
   const showRandomSelection = () => {
     setRandomRes(prevState => !prevState);
+    setpriceSelection(false);
     setShowAll(prevState => !prevState);
   };
 
@@ -43,6 +44,7 @@ function App() {
 
   const showpriceSelection = () => {
     setpriceSelection(prevState => !prevState);
+    setRandomRes(prevState => prevState);
     setShowAll(prevState => !prevState);
   };
 
@@ -68,6 +70,7 @@ function App() {
             heading={item.name}
             image={item.imageSmallUrl}
             text={item.description}
+            dataProp={item}
           />
         ))}
     </CartContext>

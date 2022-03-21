@@ -9,18 +9,8 @@ const resData = [Data].reduce((prev, curr) =>
 , [])
 console.log(resData, 'Coming from context')
 
-const CartContext = ({children}) => {
-    const restuarantList = resData.map(res =>({
-    id: res.id,
-    heading: res.name,
-    image: res.imageSmallUrl, 
-    text: res.description,
-    menu: res.menu,
-    price: res.priceRange
-    }))
-   
-    const [state, dispatch] = useReducer(cartReducer, {
-        restaurants: restuarantList, 
+const CartContext = ({children}) => {   
+    const [state, dispatch] = useReducer(cartReducer, {        
         cart: []
     })
     return <CartCtx.Provider value ={{state, dispatch}}>{children}</CartCtx.Provider>
