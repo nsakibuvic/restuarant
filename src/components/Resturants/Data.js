@@ -39,7 +39,7 @@ export const Data = {
     ],
     "restaurants": [
       {
-        "description": "Fresh, homemade Mediterranean food made with love",
+        "description": "Fresh, homemade Mediterranean food",
         "id": "71",
         "imageSmallUrl": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/71/small_Hero.jpg",
         "imageSrc": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/71/Hero.jpg",
@@ -149,7 +149,7 @@ export const Data = {
         "priceRange": 0
       },
       {
-        "description": "Serving a variety of hot gourmet sub sandwiches",
+        "description": "Serving a variety of hot sub sandwiches",
         "id": "617",
         "imageSmallUrl": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/617/small_B9318403824Z.1_20150814155759_000_GAPBJL386.1-0.jpg",
         "imageSrc": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/617/B9318403824Z.1_20150814155759_000_GAPBJL386.1-0.jpg",
@@ -215,7 +215,7 @@ export const Data = {
         "priceRange": 1
       },
       {
-        "description": "Breakfast and Lunch at Corporate Friendly Prices!",
+        "description": "Breakfast and Lunch at Friendly Prices!",
         "id": "1078",
         "imageSmallUrl": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/1078/small_PHOTO1.jpg",
         "imageSrc": "https://platterz.s3.amazonaws.com/system/restaurant/hero_image/1078/PHOTO1.jpg",

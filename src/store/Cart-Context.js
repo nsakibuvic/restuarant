@@ -4,9 +4,7 @@ import { cartReducer } from './Reducers';
 
 const CartCtx = createContext(); 
 
-const resData = [Data].reduce((prev, curr) =>
-[...prev, ...curr.restaurants.map((el) => el)]
-, [])
+const resData = Data.restaurants.map((el) => el)
 console.log(resData, 'Coming from context')
 
 const CartContext = ({children}) => {   
